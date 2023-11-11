@@ -52,33 +52,43 @@ pulaLinha()
 escolha = int(input("Escolha uma opção: "))
 limpaTela()
 match escolha:
-    case 1:
-        senha = gerarSenha(6)  # senha de 6 digitos
+    case 1:  # senha de 6 digitos
+        senha = gerarSenha(6)
         print(f"Senha básica: {senha}")
         pyperclip.copy(senha)
+        pulaLinha()
         print("Sua senha foi copiada para o clipboard.")
-    case 2:
-        senha = gerarSenha(8)  # senha de 8 digitos
+
+    case 2:  # senha de 8 digitos
+        senha = gerarSenha(8)
         print(f"Senha intermediária: {senha}")
         pyperclip.copy(senha)
+        pulaLinha()
         print("Sua senha foi copiada para o clipboard.")
-    case 3:
-        senha = gerarSenha(12)  # senha de 12 digitos
+
+    case 3:  # senha de 12 digitos
+        senha = gerarSenha(12)
         print(f"Senha recomendada: {senha}")
         pyperclip.copy(senha)
+        pulaLinha()
         print("Sua senha foi copiada para o clipboard.")
-    case 4:
+
+    case 4:  # tamanho personalizado pelo usuário
         tamanho = int(input("Qual tamanho sua senha deve ter? "))
-        senha = gerarSenha(tamanho)  # tamanho personalizado pelo usuário
+        limpaTela()
+        senha = gerarSenha(tamanho)
         print(f"Senha personalizada de {tamanho} digitos: {senha}")
         pyperclip.copy(senha)
+        pulaLinha()
         print("Sua senha foi copiada para o clipboard.")
-    case 5:
+
+    case 5:  # multiplas senhas
         qtd_senhas = int(input("Quantas senhas quer gerar? "))
         limpaTela()
         tamanho = int(input("Quantos caracteres deve ter as senhas? "))
         multiplasSenhas(qtd_senhas, tamanho)
         limpaTela()
+
 pulaLinha()
 
 
