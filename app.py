@@ -87,7 +87,7 @@ match escolha:
         limpaTela()
         tamanho = int(input("Quantos caracteres deve ter as senhas? "))
         multiplasSenhas(qtd_senhas, tamanho)
-        limpaTela()
+
 
 pulaLinha()
 
