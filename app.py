@@ -19,9 +19,9 @@ def gerarSenha(tamanho):
 
 
 def multiplasSenhas(qtd_senhas, qtd_caracteres):
-    for _ in range(1, qtd_senhas + 1):
+    for numero in range(1, qtd_senhas + 1):
         senha = gerarSenha(qtd_caracteres)
-        print(f"Senha {_}: {senha}")
+        print(f"Senha {numero}: {senha}")
 
 
 def limpaTela():
