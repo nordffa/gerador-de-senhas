@@ -40,8 +40,7 @@ opcoes = {
     1: "Básica",
     2: "Intermediária",
     3: "Recomendada",
-    4: "Tamanho Personalizado",
-    5: "Múltiplas Senhas",
+    4: "Personalizado",
 }
 for k, v in opcoes.items():
     print(f"{k}: {v}")
@@ -73,23 +72,14 @@ match escolha:
         pulaLinha()
         print("Sua senha foi copiada para o clipboard.")
 
-    case 4:  # tamanho personalizado pelo usuário
-        tamanho = int(input("Qual tamanho sua senha deve ter? "))
-        limpaTela()
-        senha = gerarSenha(tamanho)
-        print(f"Senha personalizada de {tamanho} digitos: {senha}")
-        pyperclip.copy(senha)
-        pulaLinha()
-        print("Sua senha foi copiada para o clipboard.")
-
-    case 5:  # multiplas senhas
+    case 4:  # senhas personalizadas
         qtd_senhas = int(input("Quantas senhas quer gerar? "))
         limpaTela()
         tamanho = int(input("Quantos caracteres deve ter as senhas? "))
-        multiplasSenhas(qtd_senhas, tamanho)
-
+        limpaTela()
+        if tamanho > 0 and tamanho <= 70:
+            multiplasSenhas(qtd_senhas, tamanho)
+        else:
+            print("Tamanho máximo permitido é de 70 caracteres.")
 
 pulaLinha()
-
-
-# o maximo de caracteres que uma senha pode ter no modelo atual sao 70 caracteres, preciso tratar o erro
