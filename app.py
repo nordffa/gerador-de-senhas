@@ -32,7 +32,7 @@ while True:
         senha = gerar_senha(opcoes[escolha])
         print(f"Senha: {senha}")
         copia_senha(senha)
-        print("Sua senha foi copiada para o clipboard.")
+        print("\nSua senha foi copiada para o clipboard.\n")
         break
 
     elif escolha == 5:
