@@ -23,7 +23,3 @@ def multiplas_senhas(qtd_senhas, qtd_caracteres):
 
 def limpa_tela():
     os.system("cls")
-
-
-def pula_linha():
-    print("")
